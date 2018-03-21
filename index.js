@@ -76,9 +76,9 @@ ApiAiRecognizer.prototype.recognize = function (context, done){
 
                         for (var key in result.parameters){
                             let entity = result.parameters[key];
-                            let length = entity.length;
+                            let length = entity.length || 0;
 
-                            if (length > 0){
+                            if (entity){
                                 let type = key;
                                 let score = 1;
                                 let startIndex = context.message.text.indexOf(entity);
@@ -166,3 +166,4 @@ ApiAiRecognizer.prototype.filter = function (context, result, callback) {
 };
 
 module.exports = ApiAiRecognizer;
+
