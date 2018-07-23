@@ -39,39 +39,39 @@ ApiAiRecognizer.prototype.recognize = function (context, done){
                     var result = response.result;
                     if (result.source == 'domains'){
                         entities_found = [
-                            {
-                                entity: result.fulfillment.speech,
-                                type: 'fulfillment',
-                                startIndex: -1,
-                                endIndex: -1,
-                                score: 1
-                            },
-                            {
-                                entity: result.actionIncomplete,
-                                type: 'actionIncomplete',
-                                startIndex: -1,
-                                endIndex: -1,
-                                score: 1
-                            }
+                            // {
+                            //     entity: result.fulfillment.speech,
+                            //     type: 'fulfillment',
+                            //     startIndex: -1,
+                            //     endIndex: -1,
+                            //     score: 1
+                            // },
+                            // {
+                            //     entity: result.actionIncomplete,
+                            //     type: 'actionIncomplete',
+                            //     startIndex: -1,
+                            //     endIndex: -1,
+                            //     score: 1
+                            // }
                         ];
 
                         intent = { score: result.score, intent: result.action, entities: entities_found };
                     } else if (result.source == 'agent'){
                        var entities_found = [
-                            {
-                                entity: result.fulfillment.speech,
-                                type: 'fulfillment',
-                                startIndex: -1,
-                                endIndex: -1,
-                                score: 1
-                            },
-                            {
-                                entity: result.actionIncomplete,
-                                type: 'actionIncomplete',
-                                startIndex: -1,
-                                endIndex: -1,
-                                score: 1
-                            }
+                            // {
+                            //     entity: result.fulfillment.speech,
+                            //     type: 'fulfillment',
+                            //     startIndex: -1,
+                            //     endIndex: -1,
+                            //     score: 1
+                            // },
+                            // {
+                            //     entity: result.actionIncomplete,
+                            //     type: 'actionIncomplete',
+                            //     startIndex: -1,
+                            //     endIndex: -1,
+                            //     score: 1
+                            // }
                         ];
 
                         for (var key in result.parameters){
